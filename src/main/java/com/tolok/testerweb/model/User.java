@@ -9,5 +9,6 @@ package com.tolok.testerweb.model;
  * @author Сергей
  */
 public class User {
-    
+    private String login;
+    private String password;
 }
