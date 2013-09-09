@@ -11,7 +11,8 @@
     <url>http://maven.apache.org</url>
     
     <properties>		
-	<spring.data.mongo.version>1.2.1.RELEASE</spring.data.mongo.version>		
+	<spring.data.mongo.version>1.2.1.RELEASE</spring.data.mongo.version>
+        <netbeans.hint.deploy.server>Tomcat</netbeans.hint.deploy.server>
     </properties>
 
     <dependencies>
