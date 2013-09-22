@@ -23,9 +23,14 @@
         </property>
     </bean>
 
+<bean id="propertyConfigurer" 
+            class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="location" value="/WEB-INF/resources/properties/messages.properties" />
+    </bean> 
+
     <bean id="viewResolver"
           class="org.springframework.web.servlet.view.InternalResourceViewResolver"
-          p:prefix="/WEB-INF/jsp/"
+          p:prefix="/view/"
           p:suffix=".jsp" />
 
     <!--

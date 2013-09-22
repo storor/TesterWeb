@@ -20,5 +20,11 @@
     p:password="${jdbc.password}" /-->
 
     <!-- ADD PERSISTENCE SUPPORT HERE (jpa, hibernate, etc) -->
-
+    <bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+        <property name="basenames">
+            <list>
+                <value>WEB-INF/resources/properties/messages</value>                
+            </list>
+        </property>
+    </bean>      
 </beans>
