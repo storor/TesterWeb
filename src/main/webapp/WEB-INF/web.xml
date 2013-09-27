@@ -9,8 +9,9 @@
         <param-value>
             /WEB-INF/dispatcher-servlet.xml, 
             /WEB-INF/mysql-config.xml,
-<!--            /WEB-INF/mongo-config.xml-->
+            /WEB-INF/mongo-config.xml,
             /WEB-INF/security-config.xml, 
+            /WEB-INF/rest-config.xml,
         </param-value>
     </context-param>
   
@@ -24,7 +25,8 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>dispatcher</servlet-name>
-        <url-pattern>/</url-pattern>
+        <url-pattern>/service/*</url-pattern>
+        <url-pattern>/*</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

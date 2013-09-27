@@ -4,11 +4,18 @@
  */
 package com.tolok.testerweb.model;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
 /**
  *
  * @author Сергей
  */
+
+@Document
 public class User {
+    @Id
+    private String key;
     private String login;
     private String password;
     private String email;

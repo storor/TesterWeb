@@ -13,7 +13,8 @@
     <properties>		
         <spring.data.mongo.version>1.2.1.RELEASE</spring.data.mongo.version>
         <spring.version>3.1.1.RELEASE</spring.version>
-        <mysql-connector.version>5.1.26</mysql-connector.version>		
+        <mysql-connector.version>5.1.26</mysql-connector.version>	
+        <mongo.driverversion>2.11.3</mongo.driverversion>	
     </properties>
 
     <dependencies>
@@ -129,6 +130,13 @@
             <artifactId>standard</artifactId>
             <version>1.1.2</version>
         </dependency>
+        
+        <dependency>
+            <groupId>org.mongodb</groupId>
+            <artifactId>mongo-java-driver</artifactId>
+            <version>${mongo.driverversion}</version>
+        </dependency>
+        
         <dependency>
             <groupId>org.springframework.data</groupId>
             <artifactId>spring-data-mongodb</artifactId>
@@ -157,6 +165,12 @@
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-config</artifactId>
             <version>${spring.version}</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.codehaus.jackson</groupId>
+            <artifactId>jackson-mapper-asl</artifactId>
+            <version>1.9.12</version>
         </dependency>
     </dependencies>
 
