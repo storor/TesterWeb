@@ -4,21 +4,20 @@
  */
 package com.tolok.testerweb.model;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
+import com.google.code.morphia.annotations.Entity;
+import com.google.code.morphia.annotations.Id;
+import com.google.code.morphia.emul.org.bson.types.ObjectId;
 
 /**
  *
  * @author Сергей
  */
-
-@Document
+@Entity("users")
 public class User {
-    @Id
-    private String key;
+    
+    @Id private ObjectId id;
     private String login;
     private String password;
     private String email;
     private String name;
-    
 }

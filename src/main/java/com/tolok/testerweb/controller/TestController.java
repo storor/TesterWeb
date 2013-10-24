@@ -7,6 +7,8 @@ package com.tolok.testerweb.controller;
 import com.tolok.testerweb.dao.AbstractDao;
 import com.tolok.testerweb.dao.TestDaoMongo;
 import com.tolok.testerweb.model.Test;
+import com.tolok.testerweb.model.User;
+import com.tolok.testerweb.services.UserService;
 import java.util.Collection;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -56,5 +58,18 @@ public class TestController {
             
                 AbstractDao<Test> testDao = new TestDaoMongo();
                 return testDao.readAll().toString();
+        }
+        
+        @RequestMapping(method = RequestMethod.GET, value = "/users",
+            headers = "Accept=application/json")
+        public @ResponseBody Collection<User> readAllUsers() {
+            UserService us = new UserService();
+            User us0 = new User();
+            User us1 = new User();
+            User us2 = new User();
+            us.insert(us0);
+            us.insert(us1);
+            us.insert(us2);
+            return us.findAll();
         }
 }

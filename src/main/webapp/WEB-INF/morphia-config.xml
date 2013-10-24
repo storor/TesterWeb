@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+">
+    <bean id="morphia" class="com.google.code.morphia.Morphia"/> 
+    
+    <bean id="datastore" factory-bean="morphia" factory-method="createDatastore"> 
+        <constructor-arg ref="mongo"/> 
+        <constructor-arg value="storedb"/> 
+    </bean> 
+    
+    <bean class="com.google.code.morphia.dao.BasicDAO"> 
+        <qualifier value="User"/> 
+        <constructor-arg value="com.tolok.testerweb.model.User" type="java.lang.Class"/> 
+        <constructor-arg ref="datastore"/> 
+    </bean> 
+
+</beans>

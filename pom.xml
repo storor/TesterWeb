@@ -10,14 +10,27 @@
     <name>TesterWeb</name>
     <url>http://maven.apache.org</url>
     
+    <repositories>
+        <repository>
+            <id>Morphia repository</id>
+            <url>http://morphia.googlecode.com/svn/mavenrepo/</url>
+        </repository>        
+    </repositories>
+    
     <properties>		
         <spring.data.mongo.version>1.2.1.RELEASE</spring.data.mongo.version>
         <spring.version>3.1.1.RELEASE</spring.version>
         <mysql-connector.version>5.1.26</mysql-connector.version>	
-        <mongo.driverversion>2.11.3</mongo.driverversion>	
+        <mongo.driverversion>2.11.3</mongo.driverversion>
+        <morphia.version>0.98</morphia.version>	
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>com.google.code.morphia</groupId>
+            <artifactId>morphia</artifactId>
+            <version>${morphia.version}</version>
+        </dependency>
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>servlet-api</artifactId>

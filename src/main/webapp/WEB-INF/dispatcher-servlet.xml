@@ -30,4 +30,10 @@
           class="org.springframework.web.servlet.view.InternalResourceViewResolver"
           p:prefix="/WEB-INF/view/"
           p:suffix=".jsp" />
+    <import resource="security-config.xml" />
+    
+    <import resource="mongo-config.xml" />
+    
+    <import resource="morphia-config.xml" />
+
 </beans>
